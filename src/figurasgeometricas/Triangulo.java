@@ -8,7 +8,8 @@ package figurasgeometricas;
 
 /**
  * Clase que reresenta la figura geometrica Triangulo y saca sus operaciones
- * @author Johans Gonzalez
+ * @author EDGAR ANDRES KREJCI
+ * @author MICHAEL LEANDRO CARDENAS
  */
 public class Triangulo {
            
