@@ -158,18 +158,26 @@ public class Triangulo {
      * @return TipoTriangulo
      */
     private String darTipoTriangulo() {
-        if ((lado1==lado2)||(lado2==lado3)||(lado1==lado3)){
-            return "EL TRIANGULO ES ISOSCELES";
+        double longitud1=darValorLado1();
+        double longitud2=darValorLado2();
+        double longitud3=darValorLado3();
+        if ((longitud1==longitud2)&&(longitud2==longitud3)){
+            return "EL TRIANGULO ES EQULATERO";
         }
-        else {
-            if ((lado1!=lado2)&&(lado1!=lado3)&&(lado3!=lado2)){
-                return "EL TRIANGULO ES ESCALENO";
+        else{
+            if ((longitud1==longitud2)||(longitud2==longitud3)||(longitud1==longitud3)){
+                return "EL TRIANGULO ES ISOSCELES";
             }
             else {
-                return "EL TRIANGULO ES EQULATERO";
-            }
-        }   
-    }  
+                if ((longitud1!=longitud2)&&(longitud1!=longitud3)&&(longitud3!=longitud2)){
+                    return "EL TRIANGULO ES ESCALENO";
+               }
+                else{
+                    return "";
+                }
+            }   
+        }
+    }
     /**
      * Metodo que retorna el lado1 del trinagulo
      * @return lado1 
